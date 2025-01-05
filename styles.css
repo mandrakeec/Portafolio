@@ -1,0 +1,231 @@
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 5;
+    background: linear-gradient(to right, #f4f4f4, #d6e0f0);
+    background-color: #f4f4f4;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    
+}
+
+p{
+    font-weight: bold;   
+}
+
+/* Navegación */
+.menu ul {
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #999;
+}
+
+.menu ul li {
+    margin: 5px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu ul li a:hover {
+    background-color: #ec1919;
+}
+
+/* Sección de Proyectos */
+.proyectos {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.proyectos article {
+    background-color: white;
+    margin: 10px auto;
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(50, 216, 44, 0.87);
+    border-radius: 10px;
+}
+.proyectos article:hover {
+    box-shadow: 0 2px 2px 2px red;
+    transform: scale(1.02);
+}
+
+.imagen-proyecto {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 10px 5px blue;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.imagen-proyecto:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.modal.show {
+    display: flex;
+}
+.modal-contenido {
+    position: relative;
+    max-width: 90%;
+    background-color: white;
+    box-shadow: 5px 10px 5px blue;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+}
+.modal img {
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.modal .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: red;
+}
+
+.control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+.control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contacto {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin: 25px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px black;
+}
+
+.contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    field-sizing: content;
+}
+
+.contacto button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 5px 10px 5px black;
+}
+
+.contacto button:hover {
+    background-color: #0056b3;
+    
+}
+button{
+    width: min-content;
+    margin: auto;
+}
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-weight: bold;
+}
+footer .redes-sociales {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    
+}
+
+footer .redes-sociales img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: white;
+}
+
+footer .redes-sociales img:hover {
+    transform: scale(1.5);
+}
