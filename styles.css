@@ -3,7 +3,6 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 5;
     background: linear-gradient(to right, #f4f4f4, #d6e0f0);
     background-color: #f4f4f4;
 }
@@ -16,7 +15,7 @@ header {
     text-align: center;
 }
 
-header h1 {
+h1 {
     margin: 0;
     
 }
@@ -50,11 +49,8 @@ p{
 
 /* Sección de Proyectos */
 .proyectos {
-    display: flex;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .proyectos article {
@@ -77,11 +73,12 @@ p{
     border-radius: 10px;
     box-shadow: 5px 10px 5px blue;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;;
 }
 
 .imagen-proyecto:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Modal */
@@ -92,7 +89,7 @@ p{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -105,7 +102,6 @@ p{
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    padding: 40px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -168,59 +164,26 @@ p{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.contacto {
-    padding: 20px;
+.ubicacion {
+    padding: 0 30px 20px;
     background-color: #f9f9f9;
-    margin: 25px auto;
-    max-width: 600px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px black;
-}
-
-.contacto h2 {
     text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ubicacion h2 {
     margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
-.contacto form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contacto label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contacto input,
-.contacto textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    field-sizing: content;
-}
-
-.contacto button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
+.mapa iframe {
+    width: 100%;
+    height: 450px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    box-shadow: 5px 10px 5px black;
-}
-
-.contacto button:hover {
-    background-color: #0056b3;
-    
-}
-button{
-    width: min-content;
-    margin: auto;
+    border-radius: 10px;
+    box-shadow: 10px 8px 5px rgba(0, 0, 0, 0.2);
 }
 footer {
     text-align: center;
@@ -233,8 +196,7 @@ footer .redes-sociales {
     margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 15px;
-    
+    gap: 30px;
 }
 
 footer .redes-sociales img {
