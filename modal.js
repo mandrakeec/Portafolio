@@ -4,9 +4,36 @@ const modalDescription = document.getElementById('descripcion-modal');
 const closeModal = document.querySelector('.cerrar');
 const prevButton = document.getElementById('prev');
 const nextButton = document.getElementById('next');
+// Modal de la Hoja de Vida
+const btnCv = document.getElementById('btn-cv');
+const modalCv = document.getElementById('modal-cv');
+const cerrarCv = document.getElementById('cerrar-cv');
+const iframe = document.getElementById('cv-iframe');
+const zoomIn = document.getElementById('zoom-in');
+const zoomOut = document.getElementById('zoom-out');
 
+let currentScale = 1;   // Escala inicial para el zoom
 let currentImages = []; // Almacena las imágenes del proyecto actual
 let currentIndex = 0;   // Índice de la imagen actual
+
+// Abrir el modal
+btnCv.addEventListener('click', (e) => {
+    e.preventDefault();
+    modalCv.style.display = 'flex';
+    currentScale = 1; // Restablecer el zoom al abrir
+    iframe.style.transform = `scale(${currentScale})`;
+});
+// Cerrar el modal
+cerrarCv.addEventListener('click', () => {
+    modalCv.style.display = 'none';
+});
+
+// Cerrar modal al hacer clic fuera de él
+window.addEventListener('click', (e) => {
+    if (e.target === modalCv) {
+        modalCv.style.display = 'none';
+    }
+});
 
 // Datos de los proyectos y sus imágenes
 const proyectos = {

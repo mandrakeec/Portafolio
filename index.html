@@ -15,7 +15,7 @@
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Acerca de Mí</a></li>
+                <li><a href="#btn-cv" id="btn-cv">Acerca de Mí</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
@@ -60,6 +60,27 @@
             <button id="next" class="control">Siguiente ⟶</button>
         </div>
     </div>
+    <!-- Modal para la Hoja de Vida
+    <div id="modal-cv" class="modal">
+        <div class="modal-cv-contenido">
+            <span class="cerrar">&times;</span>
+            <iframe id="cv-iframe" src="./cv.pdf" title="Hoja de vida de Mandrake_EC" style="border: none;"></iframe>
+            <div class="zoom-controles">
+                <button id="zoom-in">+</button>
+                <button id="zoom-out">-</button>
+            </div>
+        </div>
+    </div> -->
+     
+    <!-- Modal para la Hoja de Vida -->
+    <div id="modal-cv" class="modal">
+        <div class="modal-cv-contenido">
+            <span class="cerrar" id="cerrar-cv">&times;</span>
+            <iframe id="cv-iframe" src="./cv.pdf" title="Hoja de vida de Mandrake_EC" style="border: none;"></iframe>
+
+        </div>
+    </div>
+    
     <section class="contacto">
         <h2>Contacto</h2>
         <form action="https://formsubmit.co/mandrake.ec@gmail.com" method="POST">
