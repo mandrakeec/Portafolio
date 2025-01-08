@@ -29,8 +29,9 @@ p{
     list-style: none;
     padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #999;
+    flex-wrap: wrap;
 }
 
 .menu ul li {
@@ -50,7 +51,8 @@ p{
 /* Sección de Proyectos */
 .proyectos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adapta las columnas según el ancho */
+    gap: 10px;
 }
 
 .proyectos article {
@@ -68,8 +70,10 @@ p{
 }
 
 .imagen-proyecto {
-    height: 200px;
+    height: auto;
     width: 300px;
+    max-width: 300px;
+    margin: 0 auto;
     border-radius: 10px;
     box-shadow: 5px 10px 5px blue;
     cursor: pointer;
@@ -98,11 +102,13 @@ p{
     position: relative;
     width: 90%;
     max-width: 800px;
+    height: auto;
     background: white;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 50px 15px 15px;    
 }
 
 .modal iframe {
@@ -118,17 +124,17 @@ p{
     position: relative;
     width: 90%;
     max-width: 800px;
+    height: auto;
     background-color: white;
     border-radius: 30px;
     overflow: hidden;
     text-align: center;
     box-shadow: 5px 10px 5px blue;
-    padding: 20px;
+    padding: 40px 20px 10px;
 }
 .modal img {
-    max-width: 90%;
-    max-height: 70vh;
-    object-fit: contain;
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
 }
 .modal .cerrar {
@@ -191,7 +197,7 @@ footer {
     text-align: center;
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px;
     font-weight: bold;
 }
 footer .redes-sociales {
