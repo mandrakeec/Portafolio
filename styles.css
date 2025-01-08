@@ -116,12 +116,14 @@ p{
 }
 .modal-contenido {
     position: relative;
-    max-width: 90%;
+    width: 90%;
+    max-width: 800px;
     background-color: white;
-    box-shadow: 5px 10px 5px blue;
-    padding: 40px;
     border-radius: 30px;
+    overflow: hidden;
     text-align: center;
+    box-shadow: 5px 10px 5px blue;
+    padding: 20px;
 }
 .modal img {
     max-width: 90%;
