@@ -208,6 +208,7 @@ footer .redes-sociales {
     display: flex;
     justify-content: center;
     gap: 30px;
+    border-radius: 10px;
 }
 
 footer .redes-sociales img {
@@ -216,7 +217,6 @@ footer .redes-sociales img {
     cursor: pointer;
     transition: transform 0.3s;
     color: white;
-    border-radius: 10px;
 }
 
 footer .redes-sociales img:hover {
